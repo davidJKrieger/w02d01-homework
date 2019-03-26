@@ -193,3 +193,16 @@ console.log(grossTotal)
 // stringNumber = parseInt(stringNumber);
 // //Number(stringNumber);
 // console.log(typeof stringNumber);
+
+// Hungry For More ?
+
+
+// Console log the single movie ** object ** that contains the actor who starred in the least number of films.
+
+// create new object called leastStarringBond
+// create another new object called temp
+// create keys for temp called actor and tally
+// loop though bondFilms store each actor from bondFilms in object actor with keys: name and tally in temp
+// if actor in bondFilms is equal to another actor in temp +1 tally for that actor
+// loop through temp
+// check for lowest tally, store that name in object leastSarringBond under actor keys actor
