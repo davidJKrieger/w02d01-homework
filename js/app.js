@@ -43,50 +43,50 @@
 
 //### 3. Crazy Object!
 
-const crazyObject = {
-  taco: [
-    {
-      meat: 'steak',
-      cheese: ['panela', 'queso', 'chihuahua']
-    },
-    {
-      meat: 'chicken',
-      salsa: ["pico", "hot", "hotter", "really hot", "really really hot", "omg my mouth is burning"]
-    },
-  ],
-  larry: {
-    nicknames: ["LD", "Chicken Teriyaki Boyyyyyy"],
-    quotes: ["Pretty pretty prettayyyyy good", "Is that a parkinson's thing?", "women love a self confident bald man", "I'm a walking talking enigma"],
-    characters: [
-      {
-        name: "Jeff",
-        occupation: "manager"
-      },
-      {
-        name: "funkhauser",
-        occupation: "tv dude"
-      },
-      {
-        name: "susie",
-        occupation: "jeffs wife",
-        favourtieHobby: "Swearing at Larry and Jeff"
-      },
-    ]
-  }
-}
+// const crazyObject = {
+//   taco: [
+//     {
+//       meat: 'steak',
+//       cheese: ['panela', 'queso', 'chihuahua']
+//     },
+//     {
+//       meat: 'chicken',
+//       salsa: ["pico", "hot", "hotter", "really hot", "really really hot", "omg my mouth is burning"]
+//     },
+//   ],
+//   larry: {
+//     nicknames: ["LD", "Chicken Teriyaki Boyyyyyy"],
+//     quotes: ["Pretty pretty prettayyyyy good", "Is that a parkinson's thing?", "women love a self confident bald man", "I'm a walking talking enigma"],
+//     characters: [
+//       {
+//         name: "Jeff",
+//         occupation: "manager"
+//       },
+//       {
+//         name: "funkhauser",
+//         occupation: "tv dude"
+//       },
+//       {
+//         name: "susie",
+//         occupation: "jeffs wife",
+//         favourtieHobby: "Swearing at Larry and Jeff"
+//       },
+//     ]
+//   }
+// }
 
 // Use crazyObject to log the following.
 
-//     * "omg my mouth is burning"
-    console.log(crazyObject.taco[1].salsa[5])
-//     * "Pretty pretty prettayyyyy good"
-    console.log(crazyObject.larry.quotes[0])
-//     * "Swearing at Larry and Jeff"
-    console.log(crazyObject.larry.characters[2].favourtieHobby)
-//     * "Chicken Teriyaki Boyyyyyy"
-    console.log(crazyObject.larry.nicknames[1])
-//     * The object the contains the name`funkhauser`
-    console.log(crazyObject.larry.characters[1])
+// //     * "omg my mouth is burning"
+//     console.log(crazyObject.taco[1].salsa[5])
+// //     * "Pretty pretty prettayyyyy good"
+//     console.log(crazyObject.larry.quotes[0])
+// //     * "Swearing at Larry and Jeff"
+//     console.log(crazyObject.larry.characters[2].favourtieHobby)
+// //     * "Chicken Teriyaki Boyyyyyy"
+//     console.log(crazyObject.larry.nicknames[1])
+// //     * The object the contains the name`funkhauser`
+//     console.log(crazyObject.larry.characters[1])
 
 
 // &#x1F534; ** Commit:** "crazyObject"
@@ -172,3 +172,19 @@ for (i=0; i< bondFilms.length; i++)
 //   > _Hint_: To make the grosses into usable numbers, look into the `.replace` Javascript method (there are many ways to do this, however). Look into `parseInt()` also.  
 
 //   &#x1F534; **Commit:** "bond films gross"
+
+let grossTotal = 0;
+let temp = ""
+let temp2 = ''
+let noMoreExplitiveCommas = ''
+for (let i = 0; i < bondFilms.length; i++){
+   temp = bondFilms[i].gross.replace('$', "")
+   temp2 = temp.replace(",","")
+   noMoreExplitiveCommas = temp2.replace(',','')
+   parseInt(noMoreExplitiveCommas);
+
+   grossTotal += noMoreExplitiveCommas ;
+}
+// I figured out that I need to clean up the string before turning it into a number
+// I thought the next part would be easy, but Im missing something. 
+// Im going to commit and push for now.  Ill take a fresh look at it tommorow (maybe i'll try to clean up the variables too)
