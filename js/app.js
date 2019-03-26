@@ -159,13 +159,13 @@ const bondFilms = [
 
 
 // 6. Create a new array `oddBonds`, of only the Bond films released on odd-numbered years.
-const oddBonds = []
-for (i=0; i< bondFilms.length; i++)
-    if (bondFilms[i].year % 2 != 0 ){
-        oddBonds.push(bondFilms[i].year)
-    }
+// const oddBonds = []
+// for (i=0; i< bondFilms.length; i++)
+//     if (bondFilms[i].year % 2 != 0 ){
+//         oddBonds.push(bondFilms[i].year)
+//     }
 
-//   &#x1F534; **Commit:** "oddBonds"
+// //   &#x1F534; **Commit:** "oddBonds"
 
 
 // 7. Determine the total cumulative gross of the Bond franchise, and console.log the result. 
@@ -181,10 +181,15 @@ for (let i = 0; i < bondFilms.length; i++){
    temp = bondFilms[i].gross.replace('$', "")
    temp2 = temp.replace(",","")
    noMoreExplitiveCommas = temp2.replace(',','')
-   parseInt(noMoreExplitiveCommas);
-
-   grossTotal += noMoreExplitiveCommas ;
+   noMoreExplitiveCommas = parseInt(noMoreExplitiveCommas);
+   grossTotal += noMoreExplitiveCommas;
 }
+console.log(grossTotal)
 // I figured out that I need to clean up the string before turning it into a number
 // I thought the next part would be easy, but Im missing something. 
 // Im going to commit and push for now.  Ill take a fresh look at it tommorow (maybe i'll try to clean up the variables too)
+
+// stringNumber = "12345456789";
+// stringNumber = parseInt(stringNumber);
+// //Number(stringNumber);
+// console.log(typeof stringNumber);
